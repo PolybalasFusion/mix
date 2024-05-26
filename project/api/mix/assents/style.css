@@ -1,0 +1,384 @@
+html {
+  font-size: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.header {
+  background-color: #15161d;
+}
+
+@media (max-width: 425px) {
+  .header-top {
+    display: none;
+  }
+}
+
+/* Estilo para o botão de saída */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn i {
+  font-size: 18px;
+}
+
+.logout-btn span {
+  font-size: 14px;
+}
+
+.main-header-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 0;
+}
+
+@media (max-width: 425px) {
+  .main-header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-header-container a,
+.main-header-container span,
+.main-header-container i {
+  color: #fff;
+}
+
+.main-header-container #brand {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+@media (max-width: 425px) {
+  .main-header-container #search-form {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
+.main-header-container #search-form input {
+  height: 40px;
+}
+
+.main-header-container #search-form #search {
+  height: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 25px;
+  width: 60%;
+}
+
+.main-header-container .header-actions-menu {
+  display: flex;
+  align-items: center;
+}
+
+.main-header-container .header-actions-menu .wishlist-container,
+.main-header-container .header-actions-menu .header-cart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 2.5rem;
+}
+
+.main-header-container .header-actions-menu .wishlist-container .qty,
+.main-header-container .header-actions-menu .header-cart-container .qty {
+  position: absolute;
+  top: -10px;
+  right: 2px;
+  background-color: #d10024;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style para a div suspensa */
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.account-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-43%);
+  top: 70px;
+}
+
+.account-dropdown-content li {
+  list-style-type: none;
+  padding: 10px 16px;
+}
+
+.account-dropdown-content a {
+  color: black;
+  text-decoration: none;
+}
+
+.account-dropdown-content ul {
+  padding: 0;
+  list-style: none;
+}
+
+.account-dropdown-content li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.account-dropdown-content li i {
+  margin-right: 10px;
+}
+
+.account-dropdown-content li span {
+  font-weight: bold;
+}
+
+.account-dropdown-content li i {
+  font-size: 20px;
+  color: #000000;
+}
+
+.account-dropdown-content li span {
+  color: #333;
+}
+
+.account-dropdown:hover .account-dropdown-content {
+  display: block;
+}
+
+.account-icon {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-icon .qty {
+  font-size: 0.7em;
+  margin-top: 5px;
+}
+
+.centered-table {
+  margin: 50px auto;
+  width: 80%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+.centered-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.centered-table th,
+.centered-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: none;
+}
+
+.centered-table th {
+  background-color: black;
+  color: white;
+}
+
+.centered-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.centered-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form input[type="text"],
+form button[type="submit"] {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-dropdown {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.cart-dropdown .close-btn {
+  background-color: #d10024;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.account-dropdown .header-cart-container {
+  cursor: pointer;
+}
+
+.account-dropdown .account-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+.account-dropdown .account-dropdown-content li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.account-dropdown:hover .account-dropdown-content {
+  display: block;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  max-width: 400px;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.cart-dropdown p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart-dropdown #cart-items {
+  max-height: 80vh;
+}
+
+.cart-dropdown .cart-item {
+  border-bottom: 1px solid #d32f2f;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-dropdown .quantity-input {
+  margin-bottom: 5px;
+}
+
+.cart-dropdown button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.cart-dropdown .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background: #f44336;
+  cursor: pointer;
+}
+
+.cart-dropdown .close-btn:hover {
+  border: none;
+}
+
+.footer {
+  background-color: #15161d;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding-bottom: 80px; /* Adjust based on the footer height */
+}

@@ -1,0 +1,439 @@
+html {
+  font-size: 14px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.header {
+  background-color: #15161d;
+}
+
+@media (max-width: 425px) {
+  .header-top {
+    display: none;
+  }
+}
+
+/* Estilo para o botão de saída */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Centraliza o conteúdo */
+  flex-direction: column;
+  /* Organiza o conteúdo em uma coluna */
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn i {
+  font-size: 18px;
+}
+
+.logout-btn span {
+  font-size: 14px;
+  /* Tamanho do texto */
+}
+
+.main-header-container {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem 0;
+}
+
+@media (max-width: 425px) {
+  .main-header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main-header-container a,
+.main-header-container span,
+.main-header-container i {
+  color: #fff;
+}
+
+.main-header-container #brand {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+@media (max-width: 425px) {
+  .main-header-container #search-form {
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
+.main-header-container #search-form input {
+  height: 40px;
+}
+
+.main-header-container #search-form #search {
+  height: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding-left: 25px;
+  width: 60%;
+}
+
+.main-header-container .header-actions-menu {
+  display: flex;
+  align-items: center;
+}
+
+.main-header-container .header-actions-menu .wishlist-container,
+.main-header-container .header-actions-menu .header-cart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 2.5rem;
+}
+
+.main-header-container .header-actions-menu .wishlist-container .qty,
+.main-header-container .header-actions-menu .header-cart-container .qty {
+  position: absolute;
+  top: -10px;
+  right: 2px;
+  background-color: #d10024;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style para a div suspensa */
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  /* Ajuste conforme necessário */
+}
+
+.account-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  /* Alterado para transparente */
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  left: 50%;
+  /* Posicionamento no meio */
+  transform: translateX(-43%);
+  /* Para centralizar horizontalmente */
+  top: 70px;
+}
+
+.account-dropdown-content li {
+  list-style-type: none;
+  padding: 10px 16px;
+}
+
+.account-dropdown-content a {
+  color: black;
+  text-decoration: none;
+}
+
+.account-dropdown-content ul {
+  padding: 0;
+  list-style: none;
+}
+
+.account-dropdown-content li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.account-dropdown-content li i {
+  margin-right: 10px;
+}
+
+.account-dropdown-content li span {
+  font-weight: bold;
+}
+
+/* Alterações nos ícones e cores */
+.account-dropdown-content li i {
+  font-size: 20px;
+  color: #000000;
+  /* Cor de destaque */
+}
+
+.account-dropdown-content li span {
+  color: #333;
+  /* Cor do texto */
+}
+
+.account-dropdown:hover .account-dropdown-content {
+  display: block;
+}
+
+
+/* Estilos para o ícone e o texto de Minha Conta */
+.account-icon {
+  font-size: 1.5em;
+  /* Ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-icon .qty {
+  font-size: 0.7em;
+  /* Ajuste conforme necessário */
+  margin-top: 5px;
+  /* Ajuste conforme necessário */
+}
+
+/* Estilo para a tabela de clientes */
+.centered-table {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+thead th {
+  padding: 10px;
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.background-green {
+  background-color: green;
+  color: white;
+}
+
+.background-red {
+  background-color: red;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pagination a, .pagination span {
+  margin: 0 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination span {
+  background-color: #007bff;
+  color: white;
+  cursor: default;
+}
+
+tbody td img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+
+/* Estilo para a div do carrinho */
+.cart-dropdown {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.cart-dropdown .close-btn {
+  background-color: #d10024;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+/* Estilos para a div suspensa da conta do usuário */
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.account-dropdown .header-cart-container {
+  cursor: pointer;
+}
+
+.account-dropdown .account-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+.account-dropdown .account-dropdown-content li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.account-dropdown:hover .account-dropdown-content {
+  display: block;
+}
+
+/* Estilos para a div suspensa do carrinho */
+.cart-container {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  /* Alterado para posicionar no lado esquerdo */
+  width: 300px;
+  max-height: 80%;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.cart-container h3 {
+  color: #333;
+  /* Cor do título */
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container ul li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  /* Linha divisória entre itens */
+  padding-bottom: 5px;
+}
+
+.cart-container ul li:last-child {
+  border-bottom: none;
+  /* Remove a linha divisória do último item */
+}
+
+.cart-container ul li span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilo para o botão de extrair PDF e XLSX */
+.cart-container button {
+  background-color: black;
+  /* Alterado para preto */
+  color: white;
+  /* Cor do texto */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.cart-container button:hover {
+  background-color: black;
+  /* Mantém a cor preta no hover */
+}
+
+/* Estilo para o botão de fechar a div suspensa */
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.background-green {
+  background-color: rgba(49, 155, 48, 0.5);
+  /* Verde com 50% de opacidade */
+  color: #166a15;
+}
+
+.background-red {
+  background-color: rgba(197, 44, 44, 0.5);
+  /* Vermelho com 50% de opacidade */
+  color: #FDEEE7;
+}
+
+.footer {
+  background-color: #15161d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
